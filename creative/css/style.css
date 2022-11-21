@@ -1,0 +1,58 @@
+body {
+    font-family: "calibri", sans-serif;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(45deg, rgba(255, 0 ,0, 0.3), rgba(25, 100, 55, 0.3), rgb(153, 255, 102, 0.3), rgb(204, 0, 255, 0.3), rgb(255, 204, 204, 0.3));
+    background-size: 600% 100%;
+    animation: gradient 50s linear infinite;
+    animation-direction: alternate;
+}
+@keyframes gradient {
+    0% {background-position: 0%}
+    100% {background-position: 100%}
+}
+
+#content-area {
+    font-size: 16px;
+    font-family: "calibri", sans-serif;
+    width: auto;
+    border-radius: 20px;
+    padding: 75px;
+    background-color: #faf9f6;
+}
+
+#dialog-content {
+    overflow: auto;
+    width: auto !important;
+    height: 100px;
+    background-color: #f5f5f5;
+}
+
+.ui-dialog-content ui-widget-content {
+    border-radius: 20px !important;
+}
+
+p#dialog-box-p {
+    margin-left: 20px;
+}
+
+#accept-decline-button {
+    margin-top: 25px;
+}
+
+h1#main-title {
+    text-align: center;
+}
+
+h2#secondary-title {
+    text-align: center;
+}
+
+h3#tertiary-Title {
+    text-align: center;
+}
