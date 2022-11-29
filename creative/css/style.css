@@ -29,7 +29,7 @@ body {
 #dialog-content {
     overflow: auto;
     width: auto !important;
-    height: 300px;
+    height: 290px;
     background-color: #f5f5f5;
     padding: 20px;
 }
@@ -38,13 +38,22 @@ body {
     border-radius: 20px !important;
 }
 
+.ui-dialog-titlebar-close {
+    visibility: hidden;
+}
+
 p.dialog-box-p {
+    margin-left: 20px;
+}
+
+ul.dialog-box-ul {
     margin-left: 20px;
 }
 
 p#changeOne, 
 p#changeTwo,
-p#changeThree  {
+p#changeThree,
+p#changeFour  {
     margin-left: 20px;
 }
 
@@ -53,6 +62,10 @@ p#changeThree  {
     margin-bottom: 15px;
     float: right;
 }
+
+/* #back {
+    
+} */
 
 h1#main-title {
     text-align: center;
