@@ -17,6 +17,12 @@ body {
     100% {background-position: 100%}
 }
 
+@font-face {
+    font-family: "SlimyGoo-Regular";
+    src: url('../fonts/SlimyGoo-Regular.ttf');
+    src: url('../fonts/SlimyGoo-Regular.ttf') format('truetype');
+}
+
 #content-area {
     font-size: 16px;
     font-family: "calibri", sans-serif;
@@ -69,6 +75,9 @@ p#changeFour  {
 
 h1#main-title {
     text-align: center;
+    font-family: "SlimyGoo-Regular";
+    font-size: 44px;
+    color: rgb(113, 86, 119);
 }
 
 h2#secondary-title {
@@ -77,4 +86,6 @@ h2#secondary-title {
 
 h3#tertiary-Title {
     text-align: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
