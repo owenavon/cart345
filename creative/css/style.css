@@ -52,7 +52,19 @@ p.dialog-box-p {
     margin-left: 20px;
 }
 
+h1.dialog-box-h1 {
+    margin-left: 20px;
+}
+
+h2.dialog-box-h2 {
+    margin-left: 20px;
+}
+
 ul.dialog-box-ul {
+    margin-left: 20px;
+}
+
+ol.dialog-box-ol{
     margin-left: 20px;
 }
 
@@ -69,9 +81,9 @@ p#changeFour  {
     float: right;
 }
 
-/* #back {
-    
-} */
+.no-bottom-margin {
+margin-bottom: 0px;
+}
 
 h1#main-title {
     text-align: center;
@@ -88,4 +100,44 @@ h3#tertiary-Title {
     text-align: center;
     margin-top: 0px;
     margin-bottom: 0px;
+    font-size: 20px;
 }
+
+h4#tertiary-Title {
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+#back {
+    width: 50%;
+    margin-top: 30px;
+    margin-left: 65px;
+}
+
+h1#melt {
+    color: rgb(113, 86, 119);
+    font-size: 8vw;
+    text-align: center;
+    font-family: sans-serif;
+    line-height: 1;
+    letter-spacing: 0.1em;
+    transform-origin: left 0.5em;
+    -webkit-filter:url("#shadowed-goo");
+    filter:url("#shadowed-goo");
+    animation: 8s sta ease-in both;
+  }
+  @keyframes sta {
+      0% {
+      transform: scaleY(1) translateY(0);
+      opacity: 0;
+      }
+      10%,20% {
+      transform: scaleY(1) translateY(0);
+      opacity: 1;
+      }
+      100% {
+      transform: scaleY(8) translateY(0.5em);
+      opacity: 0;
+      }
+  }

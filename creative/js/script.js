@@ -1,5 +1,5 @@
 $(document).ready(function() {
-
+    
     // Main Dialog
     $("#dialog").dialog({
         autoOpen: false,
@@ -14,7 +14,25 @@ $(document).ready(function() {
         disabled: true
     });
 
+    
+    // Accept Dialog
+    $("#melting-text-dialog").dialog({
+        autoOpen: false,
+        width: 600,
+        height: 620,
+        position: {
+            at: "center"
+        }
+    }).parent().resizable({
+        containment: "body",
+        disabled: true
+    }).draggable({
+        containment: "body",
+        disabled: true
+    });
 
+
+    // "Accept button"
     // Dialog Top
     $("#dialog-pop-one").dialog({
         autoOpen: false,
@@ -92,9 +110,10 @@ $(document).ready(function() {
 
     $(document).keypress(function(event) {
         let keycode = (event.keyCode ? event.keyCode : event.which);
-
+        
         if (keycode == '13') {
             console.log('Enter Pressed');
+            
             $("#main-title").remove();
             $("#secondary-title").remove();
             $("#tertiary-title").remove();
@@ -121,26 +140,11 @@ $(document).ready(function() {
                 }
             });
         }
-
-
-        // https://linuxhint.com/disable-or-enable-button-using-javascript-and-jquery/#:~:text=For%20enabling%20and%20disabling%20the,or%20enable%20the%20button%2C%20respectively.
-        let input = document.querySelector("#Text");
-        let button = document.querySelector("#submit-button");
-        input.addEventListener("change", stateHandle);
-        function stateHandle() {
-            if (document.querySelector("#Text").value !="today") {
-            button.disabled = true;
-            }
-            else {
-            button.disabled = false;
-            }
-        }
-
-
     });
 
 
-    $("#accept").click(function() {
+    // Fake Accept
+    $(".accept").click(function() {
         $("#dialog").dialog("close");
 
         setTimeout(function() {
@@ -160,10 +164,11 @@ $(document).ready(function() {
         }, 2500);
 
         setTimeout(function() {
-            $("#dialog-pop-five").dialog("open");
+            $("#dialog-pop-five").dialog("open").hide().fadeIn(10000);
         }, 3000);
     });
 
+    // Back Button
     $('#back').click(function() {
         $("#dialog-pop-one").dialog("close");
         $("#dialog-pop-two").dialog("close");
@@ -174,8 +179,29 @@ $(document).ready(function() {
         $("#dialog").dialog("open");
     });
 
-    $('#submit-button').click(function() {
-        console.log("YUPP");
+
+    // Accept
+    $('#submit').click(function() {
+        console.log("Congrats");
+        $("#dialog").dialog("close");
+        $("#melting-text-dialog").dialog("open");
+    });
+
+    // https://www.javatpoint.com/jquery-radio-button
+    $(document).ready(function () {  
+        $("div#container").hide();  
+        $("input[name=sh]").on("click", function () {  
+            var selectedValue = $("input[name=sh]:checked").val();  
+            if (selectedValue == "show") {  
+                $("div#container").show();  
+            }  
+            else {  
+                if (selectedValue == "hide") {  
+                    $("div#container").hide();  
+                }  
+            }  
+
+        });  
     });
 
 });
