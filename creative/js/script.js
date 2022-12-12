@@ -122,22 +122,57 @@ $(document).ready(function() {
             $("#content-area").remove();
 
             $("#dialog-content").scroll(function () {
-                if ($(this).scrollTop() > 25) {
+                if ($(this).scrollTop() > 1385) {
+                    console.log($(this).scrollTop());
                     // New Words
-                    $("#changeOne").text("today")
-                    $("#changeTwo").text("hi")
-                    $("#changeThree").text("secret")
-                    $("#changeFour").text("potato")
+                    $("#changeOne").text("you");
+                    $("#changeTwo").text("your environment");
+                    $("#changeThree").text("enforce");
                 } 
-
-
                 else {
                     // Original Words
-                    $("#changeOne").text("ipsum")
-                    $("#changeTwo").text("sit")
-                    $("#changeThree").text("leo")
-                    $("#changeFour").text("ligula")
+                    $("#changeOne").text("users");
+                    $("#changeTwo").text("the world");
+                    $("#changeThree").text("violate");
                 }
+
+                if ($(this).scrollTop() > 2705) {
+                    // New Words
+                    $("#changeFour").text("1");
+                    $("#changeFive").text("political");
+                    $("#changeSix").text("delete");
+                } 
+                else {
+                    // Original Words
+                    $("#changeFour").text("200000.0000000");
+                    $("#changeFive").text("technical");
+                    $("#changeSix").text("modify");
+                }
+
+                if ($(this).scrollTop() > 5605) {
+                    // New Words
+                    $("#changeSeven").text("read");
+                    $("#changeEight").text("365");
+                    $("#changeNine").text("by letting the problem fix it self");
+                    $("#changeTen").text("U.S. Department of Defense");
+                } 
+                else {
+                    // Original Words
+                    $("#changeSeven").text("inspect");
+                    $("#changeEight").text("0");
+                    $("#changeNine").text("substitute delivery");
+                    $("#changeTen").text("Services Store Operator");
+                }
+
+                if ($(this).scrollTop() > 7843.5) {
+                    // New Words
+                    $("#changeEleven").text("Did you really read everything?");
+                } 
+                else {
+                    // Original Words
+                    $("#changeEleven").text("");
+                }
+
             });
         }
     });
@@ -164,7 +199,7 @@ $(document).ready(function() {
         }, 2500);
 
         setTimeout(function() {
-            $("#dialog-pop-five").dialog("open").hide().fadeIn(10000);
+            $("#dialog-pop-five").dialog("open");
         }, 3000);
     });
 
@@ -182,7 +217,7 @@ $(document).ready(function() {
 
     // Accept
     $('#submit').click(function() {
-        console.log("Congrats");
+        console.log("Final state");
         $("#dialog").dialog("close");
         $("#melting-text-dialog").dialog("open");
     });
@@ -191,7 +226,8 @@ $(document).ready(function() {
     $(document).ready(function () {  
         $("div#container").hide();  
         $("input[name=sh]").on("click", function () {  
-            var selectedValue = $("input[name=sh]:checked").val();  
+            let selectedValue = $("input[name=sh]:checked").val();
+            alert("Like everything? Please don't lie.");  
             if (selectedValue == "show") {  
                 $("div#container").show();  
             }  
