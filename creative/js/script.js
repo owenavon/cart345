@@ -25,10 +25,10 @@ $(document).ready(function() {
         }
     }).parent().resizable({
         containment: "body",
-        disabled: true
+        disabled: false
     }).draggable({
         containment: "body",
-        disabled: true
+        disabled: false
     });
 
 
